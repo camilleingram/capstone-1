@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-
 import static com.pluralsight.App.scanner;
-import static com.pluralsight.HomeScreen.homeScreen;
 
 public class Deposit {
     static ArrayList<Transactions> deposits = new ArrayList<>();
@@ -31,7 +29,7 @@ public class Deposit {
             bufferedWriter.write(transactionString);
             bufferedWriter.close();
 
-            homeScreen(scanner);
+            HomeScreen.homeScreen(scanner);
 
 
         }catch(IOException e) {

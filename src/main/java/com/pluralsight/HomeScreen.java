@@ -2,15 +2,8 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-import static com.pluralsight.App.scanner;
-import static com.pluralsight.Deposit.addDeposit;
-
 public class HomeScreen {
     private static String option = "";
-
-    public HomeScreen(String option) {
-        this.option = option;
-    }
 
     public static String homeScreen(Scanner scanner) {
         System.out.println("Welcome, please select an option");
@@ -22,11 +15,10 @@ public class HomeScreen {
 
         switch(option) {
             case "D":
-                addDeposit();
-
+                Deposit.addDeposit();
                 break;
             case "P":
-
+                Payment.takePayment();
                 break;
             case "L":
 
