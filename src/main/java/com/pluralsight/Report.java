@@ -1,6 +1,9 @@
 package com.pluralsight;
 
+import java.time.LocalDate;
 import java.util.Scanner;
+
+import static com.pluralsight.App.scanner;
 
 public class Report {
 
@@ -22,12 +25,86 @@ public class Report {
             case 1:
                 monthToDate();
                 break;
+            case 2:
+                previousMonth();
+                break;
+            case 3:
+                yearToDate();
+                break;
+            case 4:
+                previousYear();
+                break;
+            case 5:
+                searchVendor(scanner);
+                break;
         }
 
         return option;
     }
 
-    public static void monthToDate() {
+    public static void searchVendor(Scanner scanner) {
+        System.out.print("Enter the vendor name: ");
+        String search = scanner.nextLine();
 
+        for(Transactions transactions : App.transactions) {
+            String vendor = transactions.getVendorName();
+            if(search.equalsIgnoreCase(vendor)) {
+                System.out.println(transactions);
+            }
+        }
+
+        report(scanner);
+    }
+
+    public static void previousYear() {
+        for(Transactions transaction : App.transactions) {
+            LocalDate transactionDate = transaction.getDate();
+            LocalDate currentDate = LocalDate.now();
+
+            if(transactionDate.getYear() == (currentDate.getYear() - 1)){
+                System.out.println(transaction);
+            }
+        }
+
+        report(scanner);
+    }
+
+    public static void yearToDate() {
+        for(Transactions transaction : App.transactions) {
+            LocalDate transactionDate = transaction.getDate();
+            LocalDate currentDate = LocalDate.now();
+
+            if(transactionDate.getYear() == currentDate.getYear()){
+                System.out.println(transaction);
+            }
+        }
+
+        report(scanner);
+    }
+
+    public static void previousMonth() {
+        for(Transactions transaction : App.transactions) {
+            LocalDate transactionDate = transaction.getDate();
+            LocalDate currentDate = LocalDate.now();
+
+            if(transactionDate.getMonthValue() == (currentDate.getMonthValue() - 1)){
+                System.out.println(transaction);
+            }
+        }
+
+        report(scanner);
+    }
+
+    public static void monthToDate() {
+       for(Transactions transaction : App.transactions) {
+           LocalDate transactionDate = transaction.getDate();
+           LocalDate currentDate = LocalDate.now();
+
+           if(transactionDate.getMonthValue() == currentDate.getMonthValue()){
+               System.out.println(transaction);
+           }
+       }
+
+       report(scanner);
     }
 }

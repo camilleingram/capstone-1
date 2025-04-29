@@ -31,7 +31,7 @@ public class Ledger {
                 displayPayments();
                 break;
             case "R":
-//                Report.reports();
+                Report.report(scanner);
                 break;
             case "H":
                 App.homeScreen(scanner);
