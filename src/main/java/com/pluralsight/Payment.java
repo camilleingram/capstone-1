@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+
 import static com.pluralsight.App.scanner;
 
-public class Deposit {
-    static ArrayList<Transactions> deposits = new ArrayList<>();
+public class Payment {
 
-    public static void addDeposit() {
+    static ArrayList<Transactions> payments = new ArrayList<>();
+
+    public static void takePayment() {
 
         Transactions transaction = Transactions.transactionPrompt(scanner);
 
@@ -19,25 +21,23 @@ public class Deposit {
 
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("transactions.csv", true));
 
-            deposits.add(transaction);
+            payments.add(transaction);
 
             LocalDate date = transaction.getDate();
             LocalTime time = transaction.getTime();
             String description = transaction.getDescription();
             String vendorName = transaction.getVendorName();
-            float deposit = transaction.getAmount();
+            float payment = -1 * transaction.getAmount();
 
-            bufferedWriter.write(String.valueOf(transaction));
+            String transactionString = String.format("%tF|%tT|%s|%s|$%.2f%n", date, time, description, vendorName, payment);
+            bufferedWriter.write(transactionString);
             bufferedWriter.close();
 
             App.homeScreen(scanner);
 
-
+            System.out.println(payment);
         }catch(IOException e) {
             e.getStackTrace();
         }
-
     }
 }
-
-

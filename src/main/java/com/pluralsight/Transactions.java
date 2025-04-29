@@ -1,18 +1,19 @@
 package com.pluralsight;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Transactions {
 
-    private String date = "";
+    private LocalDate date = LocalDate.now();
     private LocalTime time = LocalTime.now();
     private String description = "";
     private String vendorName = "";
     private float amount = 0;
 
 
-    public Transactions(String date, LocalTime time, String description, String vendorName, float amount) {
+    public Transactions(LocalDate date, LocalTime time, String description, String vendorName, float amount) {
 
         this.date = date;
         this.time = time;
@@ -21,11 +22,11 @@ public class Transactions {
         this.amount = amount;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -64,7 +65,7 @@ public class Transactions {
 
     public static Transactions transactionPrompt(Scanner scanner){
         System.out.print("Enter transaction date (yyyy/mm/dd): ");
-        String date = scanner.nextLine();
+        LocalDate date = LocalDate.parse(scanner.nextLine());
 
         System.out.print("Enter transaction description: ");
         String description = scanner.nextLine();
@@ -78,4 +79,10 @@ public class Transactions {
 
         return new Transactions(date, LocalTime.now(), description, vendorName, amount);
     }
+
+    @Override
+    public String toString() {
+        return String.format("%tF|%tT|%s|%s|$%.2f%n", date, time, description, vendorName, amount);
+    }
+
 }
