@@ -5,11 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class App {
 
     static Scanner scanner = new Scanner(System.in);;
     static String option;
+    static ArrayList<Transactions> transactions = new ArrayList<>();
+
     public static void main(String[] args) {
         getTransactions();
         option = homeScreen(scanner);
@@ -55,11 +58,8 @@ public class App {
                 String vendorName = details[3];
                 float amount = Float.parseFloat(details[4].replace("$", ""));
                 Transactions transaction = new Transactions(date, time, description, vendorName, amount);
-                if(amount > 0) {
-                    Deposit.deposits.add(transaction);
-                } else {
-                    Payment.payments.add(transaction);
-                }
+                transactions.add(transaction);
+
             }
         }
         catch(IOException e) {

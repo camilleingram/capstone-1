@@ -3,29 +3,19 @@ package com.pluralsight;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
 import static com.pluralsight.App.scanner;
 
 public class Deposit {
-    static ArrayList<Transactions> deposits = new ArrayList<>();
 
     public static void addDeposit() {
 
-        Transactions transaction = Transactions.transactionPrompt(scanner);
+        Transactions transaction = Transactions.transactionPrompt("Deposit");
 
         try {
 
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("transactions.csv", true));
 
-            deposits.add(transaction);
-
-            LocalDate date = transaction.getDate();
-            LocalTime time = transaction.getTime();
-            String description = transaction.getDescription();
-            String vendorName = transaction.getVendorName();
-            float deposit = transaction.getAmount();
+            App.transactions.add(transaction);
 
             bufferedWriter.write(String.valueOf(transaction));
             bufferedWriter.close();

@@ -25,10 +25,10 @@ public class Ledger {
                 displayAll();
                 break;
             case "D":
-                displayDeposit();
+                displayDeposits();
                 break;
             case "P":
-//                displayPayment();
+                displayPayments();
                 break;
             case "R":
 //                Report.reports();
@@ -42,34 +42,32 @@ public class Ledger {
     }
 
     public static void displayPayments() {
-        for(Transactions payment : Payment.payments) {
-            System.out.println(payment);
+        for(Transactions transaction : App.transactions) {
+            if(transaction.getAmount() < 0){
+                System.out.println(transaction);
+            }
         }
+
+        ledger(scanner);
     }
 
-    public static void displayDeposit() {
+    public static void displayDeposits() {
 
-        for(Transactions deposit : Deposit.deposits) {
-            System.out.println(deposit);
+        for(Transactions transaction : App.transactions) {
+            if(transaction.getAmount() > 0) {
+                System.out.println(transaction);
+            }
         }
 
         ledger(scanner);
     }
 
     public static void displayAll() {
-        try{
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("transactions.csv"));
-            String line;
-//          bufferedReader.readLine();
-
-            while((line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
-            }
-
-            ledger(scanner);
+        for(Transactions transaction : App.transactions) {
+            System.out.println(transaction);
         }
-        catch(IOException e) {
-            e.getStackTrace();
-        }
+
+        ledger(scanner);
+
     }
 }

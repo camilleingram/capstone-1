@@ -63,7 +63,10 @@ public class Transactions {
     }
 
 
-    public static Transactions transactionPrompt(Scanner scanner){
+
+
+    public static Transactions transactionPrompt(String transactionType){
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter transaction date (yyyy/mm/dd): ");
         LocalDate date = LocalDate.parse(scanner.nextLine());
 
@@ -76,6 +79,11 @@ public class Transactions {
         System.out.print("Enter amount: ");
         float amount = scanner.nextFloat();
         scanner.nextLine();
+
+        if(transactionType.equalsIgnoreCase("Payment")) {
+            amount *= -1;
+        }
+
 
         return new Transactions(date, LocalTime.now(), description, vendorName, amount);
     }

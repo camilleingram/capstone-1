@@ -11,31 +11,22 @@ import static com.pluralsight.App.scanner;
 
 public class Payment {
 
-    static ArrayList<Transactions> payments = new ArrayList<>();
-
     public static void takePayment() {
 
-        Transactions transaction = Transactions.transactionPrompt(scanner);
+        Transactions transaction = Transactions.transactionPrompt("Payment");
 
         try {
 
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("transactions.csv", true));
 
-            payments.add(transaction);
+            App.transactions.add(transaction);
 
-            LocalDate date = transaction.getDate();
-            LocalTime time = transaction.getTime();
-            String description = transaction.getDescription();
-            String vendorName = transaction.getVendorName();
-            float payment = -1 * transaction.getAmount();
-
-            String transactionString = String.format("%tF|%tT|%s|%s|$%.2f%n", date, time, description, vendorName, payment);
-            bufferedWriter.write(transactionString);
+            bufferedWriter.write(String.valueOf(transaction));
             bufferedWriter.close();
 
             App.homeScreen(scanner);
 
-            System.out.println(payment);
+            System.out.println(transaction);
         }catch(IOException e) {
             e.getStackTrace();
         }
