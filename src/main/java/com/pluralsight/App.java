@@ -25,7 +25,7 @@ public class App {
         System.out.println("P) Make Payment (Debit)");
         System.out.println("L) Ledger");
         System.out.println("X) Exit");
-       option = scanner.nextLine();
+        option = scanner.nextLine();
 
         switch(option) {
             case "D":

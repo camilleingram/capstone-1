@@ -3,9 +3,7 @@ package com.pluralsight;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
+
 
 import static com.pluralsight.App.scanner;
 
@@ -26,7 +24,6 @@ public class Payment {
 
             App.homeScreen(scanner);
 
-            System.out.println(transaction);
         }catch(IOException e) {
             e.getStackTrace();
         }

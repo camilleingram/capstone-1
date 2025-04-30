@@ -22,24 +22,57 @@ public class Report {
             case 0:
                 Ledger.ledger(scanner);
                 break;
-            case 1:
-                monthToDate();
-                break;
-            case 2:
-                previousMonth();
-                break;
-            case 3:
-                yearToDate();
-                break;
-            case 4:
-                previousYear();
+            case 1, 2, 3, 4:
+                dateComparison(option);
                 break;
             case 5:
                 searchVendor(scanner);
                 break;
+            case 6:
+                customSearch(scanner, option);
         }
 
         return option;
+    }
+
+    public static void customSearch(Scanner scanner) {
+        System.out.println("How wold you like to filter your reports? ");
+        System.out.println("1) Start Date - End Date");
+        System.out.println("2) Description");
+        System.out.println("3) Vendor");
+        System.out.println();
+        for(Transactions transaction : App.transactions) {
+
+        }
+    }
+
+    public static void dateComparison(int searchType) {
+        for(Transactions transaction : App.transactions) {
+            LocalDate transactionDate = transaction.getDate();
+            LocalDate currentDate = LocalDate.now();
+            boolean isMatch = false;
+
+            switch(searchType) {
+                case 1:
+                    isMatch = transactionDate.getMonthValue() == currentDate.getMonthValue();
+                    break;
+                case 2:
+                    isMatch = transactionDate.getMonthValue() == (currentDate.getMonthValue() - 1);
+                    break;
+                case 3:
+                    isMatch = transactionDate.getYear() == currentDate.getYear();
+                    break;
+                case 4:
+                    isMatch = transactionDate.getYear() == (currentDate.getYear() - 1);
+                    break;
+            }
+
+            if(isMatch) {
+                System.out.println(transaction);
+            }
+        }
+
+        report(scanner);
     }
 
     public static void searchVendor(Scanner scanner) {
@@ -54,57 +87,5 @@ public class Report {
         }
 
         report(scanner);
-    }
-
-    public static void previousYear() {
-        for(Transactions transaction : App.transactions) {
-            LocalDate transactionDate = transaction.getDate();
-            LocalDate currentDate = LocalDate.now();
-
-            if(transactionDate.getYear() == (currentDate.getYear() - 1)){
-                System.out.println(transaction);
-            }
-        }
-
-        report(scanner);
-    }
-
-    public static void yearToDate() {
-        for(Transactions transaction : App.transactions) {
-            LocalDate transactionDate = transaction.getDate();
-            LocalDate currentDate = LocalDate.now();
-
-            if(transactionDate.getYear() == currentDate.getYear()){
-                System.out.println(transaction);
-            }
-        }
-
-        report(scanner);
-    }
-
-    public static void previousMonth() {
-        for(Transactions transaction : App.transactions) {
-            LocalDate transactionDate = transaction.getDate();
-            LocalDate currentDate = LocalDate.now();
-
-            if(transactionDate.getMonthValue() == (currentDate.getMonthValue() - 1)){
-                System.out.println(transaction);
-            }
-        }
-
-        report(scanner);
-    }
-
-    public static void monthToDate() {
-       for(Transactions transaction : App.transactions) {
-           LocalDate transactionDate = transaction.getDate();
-           LocalDate currentDate = LocalDate.now();
-
-           if(transactionDate.getMonthValue() == currentDate.getMonthValue()){
-               System.out.println(transaction);
-           }
-       }
-
-       report(scanner);
     }
 }

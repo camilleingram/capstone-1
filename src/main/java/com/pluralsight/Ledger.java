@@ -1,8 +1,5 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 import static com.pluralsight.App.scanner;
@@ -21,14 +18,8 @@ public class Ledger {
         option = scanner.nextLine();
 
         switch(option) {
-            case "A":
-                displayAll();
-                break;
-            case "D":
-                displayDeposits();
-                break;
-            case "P":
-                displayPayments();
+            case "A", "D", "P":
+                displayTransactions(option);
                 break;
             case "R":
                 Report.report(scanner);
@@ -41,30 +32,25 @@ public class Ledger {
         return option;
     }
 
-    public static void displayPayments() {
+
+    public static void displayTransactions(String displayType) {
         for(Transactions transaction : App.transactions) {
-            if(transaction.getAmount() < 0){
-                System.out.println(transaction);
+
+            switch(displayType) {
+                case "A":
+                    System.out.println(transaction);
+                    break;
+                case "D":
+                    if(transaction.getAmount() > 0) {
+                        System.out.println(transaction);
+                    }
+                    break;
+                case "P":
+                    if(transaction.getAmount() < 0){
+                        System.out.println(transaction);
+                    }
+                    break;
             }
-        }
-
-        ledger(scanner);
-    }
-
-    public static void displayDeposits() {
-
-        for(Transactions transaction : App.transactions) {
-            if(transaction.getAmount() > 0) {
-                System.out.println(transaction);
-            }
-        }
-
-        ledger(scanner);
-    }
-
-    public static void displayAll() {
-        for(Transactions transaction : App.transactions) {
-            System.out.println(transaction);
         }
 
         ledger(scanner);
