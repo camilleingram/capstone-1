@@ -17,7 +17,7 @@ public class Deposit {
 
             App.transactions.add(transaction);
 
-            bufferedWriter.write(String.valueOf(transaction) + "\n");
+            bufferedWriter.write("\n" + transaction.toString());
             bufferedWriter.close();
 
             System.out.println("Thank you for your deposit!");
