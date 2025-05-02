@@ -28,7 +28,6 @@ public class Ledger {
                 App.homeScreen(scanner);
                 break;
         }
-
         return option;
     }
 

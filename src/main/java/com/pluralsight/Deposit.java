@@ -17,8 +17,10 @@ public class Deposit {
 
             App.transactions.add(transaction);
 
-            bufferedWriter.write(String.valueOf(transaction));
+            bufferedWriter.write(String.valueOf(transaction) + "\n");
             bufferedWriter.close();
+
+            System.out.println("Thank you for your deposit!");
 
             App.homeScreen(scanner);
 
@@ -28,6 +30,8 @@ public class Deposit {
         }
 
     }
+
+
 }
 
 

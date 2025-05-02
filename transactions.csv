@@ -1,5 +1,105 @@
-
-2021-06-19|13:35:53|Bathing suit|Macy's|$45.00
-2025-01-17|13:36:33|Cashapp to Jailyn|Camille|$-20.00
-2024-05-23|13:37:11|Purse|Coach|$-579.89
-2017-04-21|13:37:49|Tax Refund|Maryland State Government|$1400.00
+date|time|description|vendor|amount
+2021-03-05|13:22:36|Invoice 1003 paid|Joe|$1350.00
+2023-12-26|09:39:54|Post-holiday gathering|Whole Foods|-$134.29
+2020-07-15|11:14:59|Desk chair|Staples|-$189.99
+2022-10-03|10:49:21|Bluetooth speaker|Amazon|-$79.99
+2024-01-22|12:11:08|Monthly subscription|Netflix|-$14.99
+2019-06-16|08:37:59|Document shredder|Staples|-$159.99
+2023-04-15|10:13:25|Ergonomic keyboard|Amazon|-$89.50
+2022-01-30|09:27:56|Invoice 1002 paid|Joe|$850.00
+2020-11-12|12:45:18|Catering order|Whole Foods|-$187.69
+2019-05-10|11:27:33|Wireless earbuds|Amazon|-$129.95
+2024-04-02|09:55:36|Tax preparation|Joe|$450.00
+2022-08-13|11:36:07|Desk organizer|Staples|-$42.99
+2021-01-12|14:22:17|Weekly groceries|Whole Foods|-$87.32
+2020-06-23|10:46:33|Noise-cancelling headphones|Amazon|-$199.95
+2023-09-08|09:34:23|Invoice 1005 paid|Joe|$1450.00
+2019-11-08|16:39:45|Bulletin board|Staples|-$49.99
+2021-10-14|14:05:12|Office snacks|Whole Foods|-$57.23
+2022-05-25|10:11:38|External battery pack|Amazon|-$49.99
+2018-07-11|15:53:48|Social media campaign|Joe|$1100.00
+2023-02-26|14:17:52|Office chairs|Staples|-$249.98
+2020-09-15|11:27:39|Weekly groceries|Whole Foods|-$76.34
+2021-08-06|09:45:38|Wireless charger|Amazon|-$34.99
+2019-04-02|09:55:36|Tax preparation|Joe|$450.00
+2018-03-22|10:27:59|Filing cabinet|Staples|-$119.95
+2022-12-11|08:12:36|Holiday party supplies|Whole Foods|-$324.67
+2021-01-18|17:30:45|External hard drive|Amazon|-$129.99
+2020-05-14|09:18:56|Logo design|Joe|$800.00
+2023-04-15|11:15:00|Invoice 1001 paid|Joe|$1500.00
+2019-11-23|11:34:09|Paper clips and supplies|Staples|-$18.75
+2021-09-15|11:27:39|Weekly groceries|Whole Foods|-$76.34
+2018-06-09|11:43:55|Webcam|Amazon|-$79.95
+2020-03-19|15:43:18|Quarterly report|Joe|$2500.00
+2019-10-10|09:17:59|Desktop organizer|Staples|-$35.49
+2022-07-04|09:39:11|Holiday gathering supplies|Whole Foods|-$143.22
+2023-01-25|15:46:22|Website hosting|Amazon|-$12.99
+2021-11-05|10:17:33|End-of-year planning|Joe|$1850.00
+2020-02-03|11:15:30|Printer paper|Staples|-$24.99
+2018-06-05|15:19:42|Team breakfast|Whole Foods|-$94.36
+2022-11-15|09:22:51|Smart home device|Amazon|-$149.99
+2019-09-22|13:41:28|Website maintenance|Joe|$450.00
+2023-03-08|16:30:47|Desk lamp|Staples|-$39.99
+2021-09-30|16:05:37|Team breakfast|Whole Foods|-$124.56
+2020-04-12|16:07:51|Wireless keyboard|Amazon|-$59.99
+2022-07-26|13:19:37|Quarterly planning|Joe|$1750.00
+2018-10-25|13:12:45|Desk lamp|Staples|-$45.99
+2023-06-19|14:13:27|Office lunch|Whole Foods|-$112.57
+2019-07-22|16:47:02|Laptop cooling pad|Amazon|-$39.99
+2021-04-30|12:10:44|Website maintenance|Joe|$350.00
+2020-08-28|10:27:12|Printer paper|Staples|-$27.99
+2022-02-06|16:42:13|Dinner meeting|Whole Foods|-$45.67
+2018-04-27|15:21:05|Annual software license|Amazon|-$199.99
+2023-07-11|15:53:48|Social media campaign|Joe|$1100.00
+2021-05-03|08:45:29|Presentation materials|Staples|-$45.75
+2019-02-22|10:33:18|Organic produce|Whole Foods|-$62.45
+2022-03-15|08:19:34|USB hub|Amazon|-$29.99
+2020-12-18|11:45:19|Holiday bonus|Joe|$2500.00
+2021-10-10|09:17:59|Desktop organizer|Staples|-$35.49
+2023-11-26|17:07:41|Office celebration|Whole Foods|-$215.43
+2018-01-25|15:46:22|Website hosting|Amazon|-$12.99
+2022-09-08|09:34:23|Invoice 1005 paid|Joe|$1450.00
+2020-04-05|14:28:12|Notebook bundle|Staples|-$34.50
+2019-01-12|14:22:17|Weekly groceries|Whole Foods|-$87.32
+2021-12-15|16:28:52|USB drive pack|Amazon|-$45.99
+2023-08-09|17:22:51|Training session|Joe|$650.00
+2022-05-18|14:35:22|Printer ink|Staples|-$89.97
+2018-09-01|12:43:35|Lunch meeting|Whole Foods|-$98.75
+2020-10-17|11:53:36|Portable hard drive|Amazon|-$119.95
+2021-06-12|16:25:08|Branding consultation|Joe|$950.00
+2019-08-02|14:29:16|Team dinner|Whole Foods|-$167.82
+2023-02-10|08:35:47|Monitor stand|Amazon|-$34.99
+2020-01-15|08:45:33|Client retainer|Joe|$1200.00
+2022-11-08|16:39:45|Bulletin board|Staples|-$49.99
+2018-09-15|11:27:39|Weekly groceries|Whole Foods|-$76.34
+2021-02-10|08:35:47|Monitor stand|Amazon|-$34.99
+2023-04-20|13:42:39|Standing desk|Staples|-$299.99
+2019-12-26|09:39:54|Post-holiday gathering|Whole Foods|-$134.29
+2022-08-20|08:14:29|E-reader|Amazon|-$139.99
+2020-11-19|14:56:32|Website hosting renewal|Joe|$350.00
+2018-07-01|17:05:45|Whiteboard markers|Staples|-$18.99
+2023-05-07|16:39:12|Office snacks|Whole Foods|-$67.82
+2021-03-30|17:14:22|Cloud storage upgrade|Amazon|-$19.99
+2019-06-27|13:22:18|Website updates|Joe|$550.00
+2022-12-07|13:33:27|Calendar planners|Staples|-$57.94
+2020-08-16|13:51:43|Office plants|Whole Foods|-$78.49
+2018-03-01|09:45:10|Monthly backup service|Amazon|-$9.99
+2023-09-22|13:41:28|Website maintenance|Joe|$450.00
+2021-02-26|14:17:52|Office chairs|Staples|-$249.98
+2019-04-09|11:39:24|Weekly groceries|Whole Foods|-$93.64
+2022-01-05|09:13:25|Office supplies|Staples|-$64.99
+2020-10-03|10:49:21|Bluetooth speaker|Amazon|-$79.99
+2018-05-14|09:18:56|Logo design|Joe|$800.00
+2023-10-10|09:17:59|Desktop organizer|Staples|-$35.49
+2021-07-04|09:39:11|Holiday gathering supplies|Whole Foods|-$143.22
+2022-03-01|09:45:10|Monthly backup service|Amazon|-$9.99
+2019-09-08|09:34:23|Invoice 1005 paid|Joe|$1450.00
+2020-06-02|09:30:27|Desk organizer|Staples|-$28.99
+2018-10-28|08:43:19|Lunch supplies|Whole Foods|-$84.52
+2023-11-30|10:21:23|Annual software subscription|Amazon|-$249.99
+2021-12-04|15:49:58|Year-end consultation|Joe|$1250.00
+2022-04-20|13:42:39|Standing desk|Staples|-$299.99
+2019-03-12|11:05:23|Meal prep|Whole Foods|-$78.52
+2020-01-18|17:30:45|External hard drive|Amazon|-$129.99
+2025-02-23|15:05:47|Grocery Money|Mom|$200.00
+2025-02-23|15:06:12|Groceries|Harris Teeter|$-120.00

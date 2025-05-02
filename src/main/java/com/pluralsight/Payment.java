@@ -19,8 +19,10 @@ public class Payment {
 
             App.transactions.add(transaction);
 
-            bufferedWriter.write(String.valueOf(transaction));
+            bufferedWriter.write(System.lineSeparator() +  String.valueOf(transaction) + "/n");
             bufferedWriter.close();
+
+            System.out.println("Thank you for your payment!");
 
             App.homeScreen(scanner);
 

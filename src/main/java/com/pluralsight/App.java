@@ -41,7 +41,6 @@ public class App {
                 System.out.println("Exiting...");
                 break;
         }
-
         return option;
     }
 
